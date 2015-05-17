@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <!-- Имя файла: Inventory.xml -->
+<?xml-stylesheet type="text/css" href="Inventory.css"?>
 <INVENTORY>
 	<BOOK>
 		<TITLE>Война и мир</TITLE>

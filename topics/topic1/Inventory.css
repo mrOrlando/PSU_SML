@@ -1,0 +1,16 @@
+
+/* Имя файла: Inventory.css */
+
+BOOK{
+	display: block;
+	font-size: 10pt;
+	margin-top: 12pt;
+}
+
+TITLE{
+	font-style: italic;
+}
+
+AUTHOR{
+	font-weight: bold;
+}

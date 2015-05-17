@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="students.css"?>
+<!-- Имя файла: students.xml -->
+<students>
+
+	<student>
+		<lastName>Королюк</lastName>
+		<firstName>Юрий</firstName>
+		<middleName>Иванович</middleName>
+		<birthDate>15.05.1993</birthDate>
+		<adres>Республика Беларусь</adres>
+	</student>
+
+	<student>
+		<lastName>Титова</lastName>
+		<firstName>Александра</firstName>
+		<middleName>Богдановна</middleName>
+		<birthDate>07.11.1989</birthDate>
+		<adres>г. Заокский, ул. Дарвина, дом 34, квартира 30</adres>
+	</student>
+
+	<student>
+		<lastName>Кириллов</lastName>
+		<firstName>Стоян</firstName>
+		<middleName>Романович</middleName>
+		<birthDate>08.05.1986</birthDate>
+		<adres>г. Усть-Абакан, ул. Сержанта Елизарова, дом 22, квартира 286</adres>
+	</student>
+
+	<student>
+		<lastName>Чистякова</lastName>
+		<firstName>Эвелина</firstName>
+		<middleName>Даниловна</middleName>
+		<birthDate>03.06.1994</birthDate>
+		<adres>г. Лотошино, ул. Садовая, дом 12, квартира 222</adres>
+	</student>
+
+</students>

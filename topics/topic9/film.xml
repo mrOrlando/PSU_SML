@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<!-- Выборочная форма модели содержимого указывает, что элемент может иметь
+любой из серии допустимых дочерних элементов, разделяемых символом "|".
+Например, следующее DTD указывает, что элемент FILM может состоять
+из одного дочернего элемента STAR,
+или одного дочернего элемента NARRATOR,
+или одного дочернего элемента INSTRUCTOR -->
+
+<!DOCTYPE FILM[
+	<!ELEMENT FILM (STAR | NARRATOR | INSTRUCTOR)>
+	<!ELEMENT STAR (#PCDATA)>
+	<!ELEMENT NARRATOR (#PCDATA)>
+	<!ELEMENT INSTRUCTOR (#PCDATA)>
+]>
+
+<!-- Следовательно, следующий элемент Документ будет валидным: -->
+
+<FILM>
+	<STAR>Роберт Рэдфорд</STAR>
+</FILM>
+
+<!-- как и элемент:
+
+<FILM>
+	<NARRATOR>Сэр Грэгори Парслоу</NARRATOR>
+</FILM>
+
+а также элемент: 
+
+<FILM>
+	<INSTRUCTOR>Галахед Трипвуд</INSTRUCTOR>
+</FILM>
+
+Следующий элемент Документ не будет валидным, поскольку можно включить только один из дочерних элементов:
+The content of element type "FILM" must match "(STAR|NARRATOR|INSTRUCTOR)".
+
+<FILM>
+	<NARRATOR>Сэр Грэгори Парслоу</NARRATOR>
+	<INSTRUCTOR>Галахед Трипвуд</INSTRUCTOR>
+</FILM> -->

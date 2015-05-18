@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<!-- Объявление списка атрибутов:
+<!ATTLIST FILM Class CDATA "fictional" Year CDATA #REQUIRED>
+FILM - имя оссоциированного элемента
+
+Определение первого атрибута:
+Class CDATA "fictional"
+Class - имя атрибута
+CDATA - тип атрибута
+"fictional" - объявление по умолчанию
+
+Определение второго атрибута:
+Year CDATA #REQUIRED
+Year - имя атрибута
+CDATA - тип атрибута
+#REQUIRED - объявление по умолчанию -->
+
+<!DOCTYPE FILM[
+	<!ELEMENT FILM (TITLE, (STAR | NARRATOR | INSTRUCTOR))>
+	<!ATTLIST FILM Class CDATA "fictional" Year CDATA #REQUIRED>
+	<!ELEMENT TITLE (#PCDATA)>
+	<!ELEMENT STAR (#PCDATA)>
+	<!ELEMENT NARRATOR (#PCDATA)>
+	<!ELEMENT INSTRUCTOR (#PCDATA)>
+]>
+
+<!-- Для элемента FILM атрибуту Year присвоено значение “1948”. Атрибут Class опущен,
+но атрибут имеет значение по умолчанию (“fictional”),
+оно присваивается атрибуту, как если бы он был записан в качестве значения атрибута -->
+
+<FILM Year="1948">
+	<TITLE>После утра</TITLE>
+	<STAR>Морган Атенбери</STAR>
+</FILM>

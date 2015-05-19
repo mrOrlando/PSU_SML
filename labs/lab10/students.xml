@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="students.css"?>
+<!-- Имя файла: students.xml -->
+
+<!DOCTYPE students[
+	<!ELEMENT students (title, student+, exampleFormulas)>
+
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title FontStyle (underline | bold | italic | normal) "normal">
+	<!ATTLIST title FontFamily (TimesNewRoman | Arial) "TimesNewRoman">
+
+	<!ELEMENT student (lastName, firstName, middleName, birthDate, adres)>
+	<!ELEMENT lastName (#PCDATA)>
+	<!ELEMENT firstName (#PCDATA)>
+	<!ELEMENT middleName (#PCDATA)>
+	<!ELEMENT birthDate (#PCDATA)>
+	<!ELEMENT adres (#PCDATA)>
+
+	<!ELEMENT exampleFormulas ANY>
+	<!ELEMENT formula ANY>
+	<!ELEMENT pos (#PCDATA)>
+	<!ATTLIST pos Place CDATA #FIXED "bottom">
+]>
+
+<!-- Валидация файла проверена с помощью онлайн инструмента www.xmlvalidation.com -->
+
+<students>
+
+	<title FontStyle="bold" FontFamily="Arial">Таблица каскадных стилей CSS</title>
+
+	<student>
+		<lastName>Королюк</lastName>
+		<firstName>Юрий</firstName>
+		<middleName>Иванович</middleName>
+		<birthDate>15.05.1993</birthDate>
+		<adres>Республика Беларусь</adres>
+	</student>
+	<!-- Данные сформированы генератором личностей www.randus.ru -->
+	<student>
+		<lastName>Титова</lastName>
+		<firstName>Александра</firstName>
+		<middleName>Богдановна</middleName>
+		<birthDate>07.11.1989</birthDate>
+		<adres>г. Заокский, ул. Дарвина, дом 34, квартира 30</adres>
+	</student>
+
+	<student>
+		<lastName>Кириллов</lastName>
+		<firstName>Стоян</firstName>
+		<middleName>Романович</middleName>
+		<birthDate>08.05.1986</birthDate>
+		<adres>г. Усть-Абакан, ул. Сержанта Елизарова, дом 22, квартира 286</adres>
+	</student>
+
+	<student>
+		<lastName>Чистякова</lastName>
+		<firstName>Эвелина</firstName>
+		<middleName>Даниловна</middleName>
+		<birthDate>03.06.1994</birthDate>
+		<adres>г. Лотошино, ул. Садовая, дом 12, квартира 222</adres>
+	</student>
+
+	<exampleFormulas>
+		<formula>H<pos>2</pos>SO<pos>4</pos></formula>
+		<formula>x<pos Place="top">2</pos></formula>
+	</exampleFormulas>
+
+</students>

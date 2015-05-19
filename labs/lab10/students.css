@@ -1,0 +1,67 @@
+
+/* Имя файла: students.css */
+
+/* 
+Чтобы связать xml документ с данным файлом стилей надо:
+	- разместить этот файл в одной директории с xml файлом;
+	- добавить в пролог xml файла следующую строку:
+	<?xml-stylesheet type="text/css" href="students.css"?>
+*/
+
+title[FontStyle=underline]{
+	text-decoration: underline;
+}
+
+title[FontStyle=bold]{
+	font-weight: bold;
+}
+
+title[FontStyle=italic]{
+	font-style: italic;
+}
+
+title[FontStyle=normal]{
+	font-style: normal;
+}
+
+
+title[FontFamily=TimesNewRoman]{
+	font-family: 'Times New Roman';
+}
+
+title[FontFamily=Arial]{
+	font-family: Arial;
+}
+
+
+pos{
+	font-size: 10px;
+}
+
+pos[Place=top]{
+	vertical-align: text-top;
+	color: blue;
+}
+
+pos[Place=bottom]{
+	vertical-align: text-bottom;
+	color: green;
+}
+
+
+students{
+	margin-top: 12pt;
+}
+
+student{
+	display: block;
+	font-size: 10pt;
+}
+
+birthDate{
+	font-style: italic;
+}
+
+adres{
+	font-weight: bold;
+}

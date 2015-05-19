@@ -6,6 +6,7 @@
 	<!ELEMENT INTRODUCTION (#PCDATA)>
 	<!ELEMENT SECTION (#PCDATA)>
 	<!ENTITY title "Короткая история XML">
+	<!ENTITY topics SYSTEM "Topics.xml">
 ]>
 
 <ARTICLE>
@@ -16,6 +17,6 @@
 
 	<INTRODUCTION>
 		Данная статья содержит следующие темы:
-		&title;
+		&topics;
 	</INTRODUCTION>
 </ARTICLE>

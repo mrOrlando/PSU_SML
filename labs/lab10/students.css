@@ -1,7 +1,7 @@
 
 /* Имя файла: students.css */
 
-/* 
+/*
 Чтобы связать xml документ с данным файлом стилей надо:
 	- разместить этот файл в одной директории с xml файлом;
 	- добавить в пролог xml файла следующую строку:
@@ -50,7 +50,20 @@ pos[Place=bottom]{
 
 
 students{
-	margin-top: 12pt;
+	margin: 12pt;
+	border-color: #000;
+}
+
+students[Border=solid]{
+	border-style: solid;
+}
+
+students[Border=double]{
+	border-style: double;
+}
+
+students[Border=dashed]{
+	border-style: dashed;
 }
 
 student{

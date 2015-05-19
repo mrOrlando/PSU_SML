@@ -4,6 +4,7 @@
 
 <!DOCTYPE students[
 	<!ELEMENT students (title, student+, exampleFormulas)>
+	<!ATTLIST students Border (solid | double | dashed) "solid">
 
 	<!ELEMENT title (#PCDATA)>
 	<!ATTLIST title FontStyle (underline | bold | italic | normal) "normal">
@@ -24,7 +25,7 @@
 
 <!-- Валидация файла проверена с помощью онлайн инструмента www.xmlvalidation.com -->
 
-<students>
+<students Border="double">
 
 	<title FontStyle="bold" FontFamily="Arial">Таблица каскадных стилей CSS</title>
 
@@ -61,8 +62,7 @@
 	</student>
 
 	<exampleFormulas>
-		<formula>H<pos>2</pos>SO<pos>4</pos></formula>
-		<formula>x<pos Place="top">2</pos></formula>
+		<formula>H<pos>2</pos>SO<pos Place="bottom">4</pos></formula>
 	</exampleFormulas>
 
 </students>

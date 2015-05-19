@@ -5,6 +5,7 @@
 <!DOCTYPE students[
 	<!ELEMENT students (title, student+, exampleFormulas)>
 	<!ATTLIST students Border (solid | double | dashed) "solid">
+	<!ATTLIST students Group NMTOKEN #REQUIRED>
 
 	<!ELEMENT title (#PCDATA)>
 	<!ATTLIST title FontStyle (underline | bold | italic | normal) "normal">
@@ -25,7 +26,7 @@
 
 <!-- Валидация файла проверена с помощью онлайн инструмента www.xmlvalidation.com -->
 
-<students Border="double">
+<students Border="double" Group="13ITz-3">
 
 	<title FontStyle="bold" FontFamily="Arial">Таблица каскадных стилей CSS</title>
 

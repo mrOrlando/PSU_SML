@@ -3,7 +3,7 @@
 <!-- Имя файла: students.xml -->
 
 <!DOCTYPE students[
-	<!ELEMENT students (title, student+, exampleFormulas)>
+	<!ELEMENT students (title, student+, exampleFormulas, author)>
 	<!ATTLIST students Border (solid | double | dashed) "solid">
 	<!ATTLIST students Group NMTOKEN #REQUIRED>
 
@@ -24,6 +24,9 @@
 	<!ELEMENT formula ANY>
 	<!ELEMENT pos (#PCDATA)>
 	<!ATTLIST pos Place CDATA #FIXED "bottom">
+
+	<!ELEMENT author (#PCDATA)>
+	<!ATTLIST author Login CDATA #REQUIRED>
 ]>
 
 <!-- Валидация файла проверена с помощью онлайн инструмента www.xmlvalidation.com -->
@@ -67,5 +70,7 @@
 	<exampleFormulas>
 		<formula>H<pos>2</pos>SO<pos Place="bottom">4</pos></formula>
 	</exampleFormulas>
+
+	<author Login="juriy">Автор документа: Королюк Ю.И.</author>
 
 </students>

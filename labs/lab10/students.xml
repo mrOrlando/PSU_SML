@@ -12,6 +12,8 @@
 	<!ATTLIST title FontFamily (TimesNewRoman | Arial) "TimesNewRoman">
 
 	<!ELEMENT student (lastName, firstName, middleName, birthDate, adres)>
+	<!ATTLIST student NumberRecordBook NMTOKEN #REQUIRED>
+	<!ATTLIST student Sex (male | female) "male">
 	<!ELEMENT lastName (#PCDATA)>
 	<!ELEMENT firstName (#PCDATA)>
 	<!ELEMENT middleName (#PCDATA)>
@@ -30,7 +32,7 @@
 
 	<title FontStyle="bold" FontFamily="Arial">Таблица каскадных стилей CSS</title>
 
-	<student>
+	<student NumberRecordBook="01">
 		<lastName>Королюк</lastName>
 		<firstName>Юрий</firstName>
 		<middleName>Иванович</middleName>
@@ -38,7 +40,7 @@
 		<adres>Республика Беларусь</adres>
 	</student>
 	<!-- Данные сформированы генератором личностей www.randus.ru -->
-	<student>
+	<student NumberRecordBook="02" Sex="female">
 		<lastName>Титова</lastName>
 		<firstName>Александра</firstName>
 		<middleName>Богдановна</middleName>
@@ -46,7 +48,7 @@
 		<adres>г. Заокский, ул. Дарвина, дом 34, квартира 30</adres>
 	</student>
 
-	<student>
+	<student NumberRecordBook="03">
 		<lastName>Кириллов</lastName>
 		<firstName>Стоян</firstName>
 		<middleName>Романович</middleName>
@@ -54,7 +56,7 @@
 		<adres>г. Усть-Абакан, ул. Сержанта Елизарова, дом 22, квартира 286</adres>
 	</student>
 
-	<student>
+	<student NumberRecordBook="04" Sex="female">
 		<lastName>Чистякова</lastName>
 		<firstName>Эвелина</firstName>
 		<middleName>Даниловна</middleName>

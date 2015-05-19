@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!-- Открывающая скобка, вслед за которой идет список элементарных имен, разделенных символами,
+после чего следует закрывающая скобка.
+Элементарное имя — это имя, состоящее из одной или нескольких букв, цифр, точек (.), тире (-) или
+символов подчеркивания (_), а также может включать одно двоеточие (:), но не на первом месте.
+Например, для ограничения значения атрибута Class словами "fiction", "education" или "documentary",
+данному атрибуту можно присвоить нумерованный тип следующим образом:
+
+<!ATTLIST FILM Class (fiction | education | documentary) "fiction"> -->
+
+<!DOCTYPE FILM[
+	<!ELEMENT FILM (TITLE, (STAR | NARRATOR | INSTRUCTOR))>
+	<!ATTLIST FILM Class (fiction | education | documentary) "fiction">
+	<!ELEMENT TITLE (#PCDATA)>
+	<!ELEMENT STAR (#PCDATA)>
+	<!ELEMENT NARRATOR (#PCDATA)>
+	<!ELEMENT INSTRUCTOR (#PCDATA)>
+]>
+
+<!-- Если опустить атрибут Class, ему будет по умолчанию присвоено значение "fiction".
+Присвоение атрибуту Class значения, отличного от "fiction", "education" или "documentary", приведет к ошибке. -->
+
+<FILM Class="education">
+	<TITLE>Использование XML</TITLE>
+	<NARRATOR>Пётр Иванов</NARRATOR>
+</FILM>

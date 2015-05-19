@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!-- Ключевое слово NOTATION, за которым идет пробел, затем открывающая скобка, затем список имен нотаций,
+разделяемых символами, после чего следует закрывающая скобка.
+Каждое из этих имен должно точно соответствовать имени нотации, объявленному в DTD.
+Нотация описывает формат данных или идентифицирует программу, применяемую для обработки определенного формата.
+
+Например, в DTD объявлены нотации HTML, SGML и RTF.
+Тогда можно ограничить значения атрибута Format одним из этих имен нотаций с помощью следующего объявления: -->
+
+<!DOCTYPE EXAMPLE_DOCUMENT[
+	<!ELEMENT EXAMPLE_DOCUMENT (#PCDATA)>
+	<!ATTLIST EXAMPLE_DOCUMENT Format NOTATION (HTML | SGML | RTF) #REQUIRED>
+]>
+
+<!-- В дальнейшем можно использовать атрибут Format для указания формата
+определенного элемента EXAMPLE_DOCUMENT, как в следующем примере: -->
+
+<EXAMPLE_DOCUMENT Format="HTML">
+	<![CDATA[
+		<HTML>
+			<HEAD>
+				<TITLE>Моя домашняя страничка</TITLE>
+			</HEAD>
+			<BODY>
+				<P>Добро пожаловать!</P>
+			</BODY>
+		</HTML>
+	]]>
+</EXAMPLE_DOCUMENT>
+
+<!-- 
+Errors in the XML document:
+	14:	1	The notation "HTML" must be declared when referenced in the notation type list for attribute "Format".
+	14:	1	The notation "RTF" must be declared when referenced in the notation type list for attribute "Format".
+	14:	1	The notation "SGML" must be declared when referenced in the notation type list for attribute "Format".
+-->

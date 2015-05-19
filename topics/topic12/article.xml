@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE ARTICLE[
+	<!ELEMENT ARTICLE (TITLEPAGE, INTRODUCTION, SECTION*)>
+	<!ELEMENT TITLEPAGE (#PCDATA)>
+	<!ELEMENT INTRODUCTION (#PCDATA)>
+	<!ELEMENT SECTION (#PCDATA)>
+	<!ENTITY title "Короткая история XML">
+]>
+
+<ARTICLE>
+	<TITLEPAGE>
+		Title: &title;
+		Автор: Иван Петров
+	</TITLEPAGE>
+
+	<INTRODUCTION>
+		Данная статья содержит следующие темы:
+		&title;
+	</INTRODUCTION>
+</ARTICLE>

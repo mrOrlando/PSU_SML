@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="students.css"?>
+<!-- Имя файла: students.xml -->
+
+<!DOCTYPE students SYSTEM "author.xml"[
+	<!ELEMENT students (title, student+, exampleFormulas, author, text)>
+	<!ATTLIST students Border (solid | double | dashed) "solid">
+	<!ATTLIST students Group NMTOKEN #REQUIRED>
+
+	<!ELEMENT title (#PCDATA)>
+	<!ATTLIST title FontStyle (underline | bold | italic | normal) "normal">
+	<!ATTLIST title FontFamily (TimesNewRoman | Arial) "TimesNewRoman">
+
+	<!ELEMENT student (lastName, firstName, middleName, birthDate, adres, course, department)>
+	<!ATTLIST student NumberRecordBook NMTOKEN #REQUIRED>
+	<!ATTLIST student Sex (male | female) "male">
+	<!ELEMENT lastName (#PCDATA)>
+	<!ELEMENT firstName (#PCDATA)>
+	<!ELEMENT middleName (#PCDATA)>
+	<!ELEMENT birthDate (#PCDATA)>
+	<!ELEMENT adres (#PCDATA)>
+	<!ELEMENT course (#PCDATA)>
+	<!ELEMENT department (#PCDATA)>
+
+	<!ENTITY courseDepart "<course>1 курс</course><department>очное отделение</department>">
+
+	<!ELEMENT exampleFormulas ANY>
+	<!ELEMENT formula ANY>
+	<!ELEMENT pos (#PCDATA)>
+	<!ATTLIST pos Place CDATA #FIXED "bottom">
+
+	<!ELEMENT text (title, p+)>
+	<!ELEMENT p (#PCDATA)>
+	<!ATTLIST p SampleAtt NMTOKEN #REQUIRED>
+]>
+
+<!-- Валидация файла проверена с помощью онлайн инструмента www.xmlvalidation.com -->
+
+<students Border="double" Group="13ITz-3">
+
+	<title FontStyle="bold" FontFamily="Arial">Таблица каскадных стилей CSS</title>
+
+	<student NumberRecordBook="01">
+		<lastName>Королюк</lastName>
+		<firstName>Юрий</firstName>
+		<middleName>Иванович</middleName>
+		<birthDate>15.05.1993</birthDate>
+		<adres>Республика Беларусь</adres>
+		&courseDepart;
+	</student>
+	<!-- Данные сформированы генератором личностей www.randus.ru -->
+	<student NumberRecordBook="02" Sex="female">
+		<lastName>Титова</lastName>
+		<firstName>Александра</firstName>
+		<middleName>Богдановна</middleName>
+		<birthDate>07.11.1989</birthDate>
+		<adres>г. Заокский, ул. Дарвина, дом 34, квартира 30</adres>
+		&courseDepart;
+	</student>
+
+	<student NumberRecordBook="03">
+		<lastName>Кириллов</lastName>
+		<firstName>Стоян</firstName>
+		<middleName>Романович</middleName>
+		<birthDate>08.05.1986</birthDate>
+		<adres>г. Усть-Абакан, ул. Сержанта Елизарова, дом 22, квартира 286</adres>
+		&courseDepart;
+	</student>
+
+	<student NumberRecordBook="04" Sex="female">
+		<lastName>Чистякова</lastName>
+		<firstName>Эвелина</firstName>
+		<middleName>Даниловна</middleName>
+		<birthDate>03.06.1994</birthDate>
+		<adres>г. Лотошино, ул. Садовая, дом 12, квартира 222</adres>
+		&courseDepart;
+	</student>
+
+	<exampleFormulas>
+		<formula>H<pos>2</pos>SO<pos Place="bottom">4</pos></formula>
+	</exampleFormulas>
+
+	<author Login="juriy">Автор документа: Королюк Ю.И.</author>
+
+	<text>
+		<title>"Основной критерий для валидного документа</title>
+		<p SampleAtt="0">Валидные XML-документы отвечают более строгому набору критериев, чем обычные корректно сформированные документы, о которых говорилось выше. Теперь познакомимся с основными требованиями для валидных XML-документов и оценим преимущества валидных документов. Затем рассмотрим, как объявлять тип документа для всех валидных XML-документов. После этого будут представлены подробные инструкции по определению элементов и атрибутов в валидном документе.</p>
+		<p SampleAtt="0">Каждый XML-документ должен быть корректно сформированным, т. е. отвечать минимальным требованиям по составлению XML-документа. Если документ не является корректно сформированным, он не может считаться XML-документом. Корректно сформированный XML-документ также может быть валидным."</p>
+	</text>
+
+</students>

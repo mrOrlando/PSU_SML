@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Мировая литература</title>
+</head>
+<body>
+	<xml id="dso-inventory" src="Inventory02.xml"></xml>
+	<table datasrc="#dso-inventory" border="1">
+		<thead>
+			<th>Мировая литература</th>
+		</thead>
+		<tbody>
+			<tr><!-- строка 1 -->
+				<td><span datafld="COUNTRY"></span></td>
+			</tr>
+			<tr><!-- строка 2 -->
+				<td>
+					<table datasrc="#dso-inventory" datafld="BOOK" border="0" cellpadding="5">
+						<thead>
+							<th>Заголовок</th>
+							<th>Автор</th>
+							<th>Обложка</th>
+							<th>Страниц</th>
+							<th>Цена</th>
+						</thead>
+						<tbody>
+							<tr align="center">
+								<td><span datafld="TITLE" style="font-style:italic"></span></td>
+								<td><span datafld="AUTHOR"></span></td>
+								<td><span datafld="BINDING"></span></td>
+								<td><span datafld="PAGES"></span></td>
+								<td><span datafld="PRICE"></span></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr><!-- конец строки 2 -->
+		<tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE INVENTORY[
+	<!ENTITY am "American">
+	<!ENTITY en "Englishman">
+	<!ELEMENT INVENTORY (BOOK*)>
+	<!ELEMENT BOOK (TITLE, AUTHOR)>
+	<!ELEMENT TITLE (#PCDATA)>
+	<!ELEMENT AUTHOR (#PCDATA)>
+	<!ATTLIST AUTHOR Nationality CDATA "&am;">
+]>
+
+<INVENTORY>
+	<BOOK>
+		<TITLE>Дэвид Коперфилд</TITLE>
+		<AUTHOR Nationality="&en;">Чарльз Диккенс</AUTHOR>
+	</BOOK>
+	<!-- другие элементы... -->
+</INVENTORY>

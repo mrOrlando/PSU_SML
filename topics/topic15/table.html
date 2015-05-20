@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Опись книг</title>
+</head>
+<body>
+	<xml id="dso-inventory" src="Inventory.xml"></xml>
+	<h2>Опись книг</h2>
+	<button onclick="toggle('first')">|&lt; Первая</button>
+	<button onclick="toggle('prev')">&lt; Предыдущая</button>
+	<button onclick="toggle('next')">Следующая &gt;</button>
+	<button onclick="toggle('last')">Последняя &gt;|</button>
+	<table id="inventory-table" datasrc="#dso-inventory" datapagesize="2" border="1" cellpadding="5">
+		<thead>
+			<th>Заголовок</th>
+			<th>Автор</th>
+			<th>Обложка</th>
+			<th>Страниц</th>
+			<th>Цена</th>
+		</thead>
+		<tbody>
+			<tr align="center">
+				<td><span datafld="TITLE" style="font-style:italic"></span></td>
+				<td><span datafld="AUTHOR"></span></td>
+				<td><span datafld="BINDING"></span></td>
+				<td><span datafld="PAGES"></span></td>
+				<td><span datafld="PRICE"></span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script>
+		function toggle(value){
+			var table = document.getElementById("inventory-table");
+			switch (value) {
+				case 'first': table.firstPage(); break;
+				case 'prev': table.previousPage(); break;
+				case 'next': table.nextPage(); break;
+				case 'last': table.lastPage(); break;
+			}
+		}
+	</script>
+</body>
+</html>

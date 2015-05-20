@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!-- Имя файла: students.xml -->
+
+<students>
+
+	<student>
+		<id>1</id>
+		<lastName>Королюк</lastName>
+		<firstName>Юрий</firstName>
+		<middleName>Иванович</middleName>
+		<birthYear>1993</birthYear>
+		<birthDay>15</birthDay>
+		<birthMonth>05</birthMonth>
+		<adres>
+			<![CDATA[
+				<Республика Беларусь>
+			]]>
+		</adres>
+	</student>
+
+	<student>
+		<id>2</id>
+		<lastName>Титова</lastName>
+		<firstName>Александра</firstName>
+		<middleName>Богдановна</middleName>
+		<birthYear>1989</birthYear>
+		<birthDay>07</birthDay>
+		<birthMonth>01</birthMonth>
+		<adres>
+			<![CDATA[
+				<г. Заокский, ул. Дарвина, дом 34, квартира 30>
+			]]>
+		</adres>
+	</student>
+	<!-- знак < (меньше) &lt; &#60; -->
+	<student>
+		<id>3</id>
+		<lastName>Кириллов</lastName>
+		<firstName>Стоян</firstName>
+		<middleName>Романович</middleName>
+		<birthYear>1986</birthYear>
+		<birthDay>08</birthDay>
+		<birthMonth>05</birthMonth>
+		<adres>&lt;г. Усть-Абакан, ул. Сержанта Елизарова, дом 22, квартира 286></adres>
+	</student>
+
+	<student>
+		<id>4</id>
+		<lastName>Чистякова</lastName>
+		<firstName>Эвелина</firstName>
+		<middleName>Даниловна</middleName>
+		<birthYear>1994</birthYear>
+		<birthDay>03</birthDay>
+		<birthMonth>06</birthMonth>
+		<adres>&#60;г. Лотошино, ул. Садовая, дом 12, квартира 222></adres>
+	</student>
+
+</students>

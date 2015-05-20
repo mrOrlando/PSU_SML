@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE INVENTORY[
+	<!ELEMENT INVENTORY (BOOK | CD)*>
+	<!ENTITY % book_decls SYSTEM "Book.dtd">
+	<!ENTITY % cd_decls SYSTEM "CD.dtd">
+	%book_decls;
+	%cd_decls;
+]>
+
+<INVENTORY>
+
+	<BOOK>
+		<BOOKTITLE>Картинки природы</BOOKTITLE>
+		<AUTHOR>Фёдор Петров</AUTHOR>
+		<PAGES>473</PAGES>
+	</BOOK>
+
+	<CD>
+		<CDTITLE>Большой концерт. Опус 3</CDTITLE>
+		<COMPOSER>Гандель</COMPOSER>
+		<LENGTH>72 минуты</LENGTH>
+	</CD>
+
+	<BOOK>
+		<BOOKTITLE>Следопыт</BOOKTITLE>
+		<AUTHOR>Д. Ф. Купер</AUTHOR>
+		<PAGES>444</PAGES>
+	</BOOK>
+
+	<!-- дополнительные виды продукции... -->
+
+</INVENTORY>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Опись книг</title>
+</head>
+<body>
+	<xml id="dso-inventory" src="Inventory.xml"></xml>
+	<h2>Описание книги</h2>
+	<!--<button onclick="toggle('first')">|&lt; Первая</button>
+	<button onclick="toggle('prev')">&lt; Предыдущая</button>
+	<button onclick="toggle('next')">Следующая &gt;</button>
+	<button onclick="toggle('last')">Последняя &gt;|</button>-->
+	Заголовок: <span datasrc="#dso-inventory" datafld="TITLE"></span><br />
+	Автор: <span datasrc="#dso-inventory" datafld="AUTHOR"></span><br />
+	Обложка: <span datasrc="#dso-inventory" datafld="BINDING"></span><br />
+	Страниц: <span datasrc="#dso-inventory" datafld="PAGES"></span><br />
+	Цена: <span datasrc="#dso-inventory" datafld="PRICE"></span><br />
+
+	<script>
+		function toggle(value){
+			var table = document.getElementById("inventory-table");
+			switch (value) {
+				case 'first': table.firstPage(); break;
+				case 'prev': table.previousPage(); break;
+				case 'next': table.nextPage(); break;
+				case 'last': table.lastPage(); break;
+			}
+		}
+	</script>
+</body>
+</html>

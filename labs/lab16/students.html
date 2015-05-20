@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Опись книг</title>
+</head>
+<body>
+	<xml id="dso-inventory" src="students.xml"></xml>
+	<h2>Описание книги</h2>
+	Номер: <span datasrc="#dso-inventory" datafld="id"></span><br />
+	Фамилия: <span datasrc="#dso-inventory" datafld="lastName"></span><br />
+	Имя: <span datasrc="#dso-inventory" datafld="firstName"></span><br />
+	Отчетсво: <span datasrc="#dso-inventory" datafld="middleName"></span><br />
+	Год: <span datasrc="#dso-inventory" datafld="birthYear"></span><br />
+	День: <span datasrc="#dso-inventory" datafld="birthDay"></span><br />
+	Месяц: <span datasrc="#dso-inventory" datafld="birthMonth"></span><br />
+	Адрес: <span datasrc="#dso-inventory" datafld="adres"></span><br />
+
+	<hr />
+	<button onclick="toggle('first')">|&lt; Первая</button>
+	<button onclick="toggle('prev')">&lt; Назад</button>
+	<button onclick="toggle('next')">Вперёд &gt;</button>
+	<button onclick="toggle('last')">Последняя &gt;|</button>
+
+	<script>
+		function toggle(value){
+			var records = document.getElementById("dso-inventory");
+			switch (value) {
+				case 'first': records.recordset.moveFirst(); break;
+				case 'prev': records.recordset.movePrevious(); handler_bof(records); break;
+				case 'next': records.recordset.moveNext(); handler_eof(records); break;
+				case 'last': records.recordset.moveLast(); break;
+			}
+		}
+
+		function handler_bof(recs){
+			if (recs.recordset.BOF){
+				recs.recordset.moveNext();
+			}
+		}
+
+		function handler_eof(recs){
+			if (recs.recordset.EOF){
+				recs.recordset.movePrevious();
+			}
+		}
+	</script>
+</body>
+</html>

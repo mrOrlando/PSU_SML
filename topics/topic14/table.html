@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Опись книг</title>
+</head>
+<body>
+	<xml id="dso-inventory" src="Inventory.xml"></xml>
+		<h2>Опись книг</h2>
+		<table datasrc="#dso-inventory" border="1" cellpadding="5">
+			<thead>
+				<th>Заголовок</th>
+				<th>Автор</th>
+				<th>Обложка</th>
+				<th>Страниц</th>
+				<th>Цена</th>
+			</thead>
+			<tbody>
+				<tr align="center">
+					<td><span datafld="TITLE" style="font-style:italic"></span></td>
+					<td><span datafld="AUthOR"></span></td>
+					<td><span datafld="BINDING"></span></td>
+					<td><span datafld="PAGES"></span></td>
+					<td><span datafld="РRIСЕ"></span></td>
+				</tr>
+			</tbody>
+		</table>
+</body>
+</html>
+
+<!-- The datasrc attribute on the table element is obsolete.
+Use script and a mechanism such as XMLHttpRequest to populate the page dynamically -->
+
+<!-- 
+dataSrc attribute
+http://help.dottoro.com/lhnkjvmx.php
+
+In HTML, only Internet Explorer supports table creation dynamically from XML.
+If you want to implement similar functionality in other browsers, you need to use JavaScript. For further details, see the page for the XMLHttpRequest object.
+
+XMLHttpRequest - http://help.dottoro.com/ljspgwvf.php
+-->

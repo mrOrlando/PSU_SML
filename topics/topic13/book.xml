@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE BOOK[
+	<!ENTITY % author
+	"<!-- информация об авторе -->
+	<!ELEMENT AUTHOR (#PCDATA)>
+	<!ATTLIST AUTHOR Nationality CDATA 'American'>"
+	>
+	<!ELEMENT BOOK (TITLE, AUTHOR)>
+	<!ELEMENT TITLE (#PCDATA)>
+	%author;
+]>
+
+<BOOK>
+	<TITLE>Заголовок</TITLE>
+	<AUTHOR>Автор</AUTHOR>
+</BOOK>
+
+<!-- Google Chrome:
+This page contains the following errors:
+error on line 11 at column 10: PEReference: %author; not found
+Below is a rendering of the page up to the first error. -->
+
+<!-- Mozilla Firefox: ok -->

@@ -1,0 +1,12 @@
+<!ELEMENT student (lastName, firstName, middleName, birthDate, adres, course, department)>
+<!ATTLIST student NumberRecordBook NMTOKEN #REQUIRED>
+<!ATTLIST student Sex (male | female) "male">
+
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT middleName (#PCDATA)>
+<!ELEMENT birthDate (#PCDATA)>
+<!ELEMENT adres (#PCDATA)>
+
+<!ELEMENT course (#PCDATA)>
+<!ELEMENT department (#PCDATA)>

@@ -1,0 +1,4 @@
+<![INCLUDE[
+	<!ELEMENT author (#PCDATA)>
+	<!ATTLIST author Login CDATA #REQUIRED>
+]]>

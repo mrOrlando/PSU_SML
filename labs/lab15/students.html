@@ -7,7 +7,11 @@
 <body>
 	<xml id="dso-inventory" src="students.xml"></xml>
 		<h2>Студенты</h2>
-		<table datasrc="#dso-inventory" border="1" cellpadding="5">
+		<button onclick="toggle('first')">|&lt; Первая</button>
+		<button onclick="toggle('prev')">&lt; Предыдущая</button>
+		<button onclick="toggle('next')">Следующая &gt;</button>
+		<button onclick="toggle('last')">Последняя &gt;|</button>
+		<table id="students-table" datasrc="#dso-inventory" datapagesize="2" border="1" cellpadding="5">
 			<thead>
 				<th>№</th><th>Фамилия</th><th>Имя</th><th>Отчество</th><th>Адрес</th>
 			</thead>
@@ -35,5 +39,17 @@
 				</tr>
 			</tbody>
 		</table>
+
+		<script>
+			function toggle(value){
+				var table = document.getElementById("students-table");
+				switch (value) {
+					case 'first': table.firstPage(); break;
+					case 'prev': table.previousPage(); break;
+					case 'next': table.nextPage(); break;
+					case 'last': table.lastPage(); break;
+				}
+			}
+		</script>
 </body>
 </html>

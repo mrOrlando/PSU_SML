@@ -7,24 +7,38 @@
 <body>
 	<xml id="dso-inventory" src="Inventory.xml"></xml>
 	<h2>Описание книги</h2>
-	<!--<button onclick="toggle('first')">|&lt; Первая</button>
-	<button onclick="toggle('prev')">&lt; Предыдущая</button>
-	<button onclick="toggle('next')">Следующая &gt;</button>
-	<button onclick="toggle('last')">Последняя &gt;|</button>-->
 	Заголовок: <span datasrc="#dso-inventory" datafld="TITLE"></span><br />
 	Автор: <span datasrc="#dso-inventory" datafld="AUTHOR"></span><br />
 	Обложка: <span datasrc="#dso-inventory" datafld="BINDING"></span><br />
 	Страниц: <span datasrc="#dso-inventory" datafld="PAGES"></span><br />
 	Цена: <span datasrc="#dso-inventory" datafld="PRICE"></span><br />
 
+	<hr />
+	<button onclick="toggle('first')">|&lt; Первая</button>
+	<button onclick="toggle('prev')">&lt; Назад</button>
+	<button onclick="toggle('next')">Вперёд &gt;</button>
+	<button onclick="toggle('last')">Последняя &gt;|</button>
+
 	<script>
 		function toggle(value){
-			var table = document.getElementById("inventory-table");
+			var records = document.getElementById("dso-inventory");
 			switch (value) {
-				case 'first': table.firstPage(); break;
-				case 'prev': table.previousPage(); break;
-				case 'next': table.nextPage(); break;
-				case 'last': table.lastPage(); break;
+				case 'first': records.recordset.moveFirst(); break;
+				case 'prev': records.recordset.movePrevious(); handler_bof(records); break;
+				case 'next': records.recordset.moveNext(); handler_eof(records); break;
+				case 'last': records.recordset.moveLast(); break;
+			}
+		}
+
+		function handler_bof(recs){
+			if (recs.recordset.BOF){
+				recs.recordset.moveNext();
+			}
+		}
+
+		function handler_eof(recs){
+			if (recs.recordset.EOF){
+				recs.recordset.movePrevious();
 			}
 		}
 	</script>

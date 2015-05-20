@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Студенты</title>
+</head>
+<body>
+	<xml id="dso-inventory" src="students.xml"></xml>
+		<h2>Студенты</h2>
+		<table datasrc="#dso-inventory" border="1" cellpadding="5">
+			<thead>
+				<th>Фамилия</th>
+				<th>Имя</th>
+				<th>Отчество</th>
+				<th>Дата рождения</th>
+				<th>Адрес</th>
+				<th>Успеваемость</th>
+			</thead>
+			<tbody>
+				<tr align="center">
+					<td><span datafld="lastName" dataformatas="HTML"></span></td>
+					<td><span datafld="firstName" dataformatas="HTML"></span></td>
+					<td><span datafld="middleName" dataformatas="HTML"></span></td>
+					<td><span datafld="birthDate"></span></td>
+					<td><span datafld="adres"></span></td>
+					<td><img datafld="progress" alt="progress"/>
+				</tr>
+			</tbody>
+		</table>
+</body>
+</html>

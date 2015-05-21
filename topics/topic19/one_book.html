@@ -1,0 +1,23 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Описание книги</title>
+	<script for="window" event="onload">
+		var Document = document.getElementById("dso-book");
+		document.getElementById("title").innerHTML   = Document.documentElement.childNodes(0).text;
+		document.getElementById("author").innerHTML  = Document.documentElement.childNodes(1).text;
+		document.getElementById("binding").innerHTML = Document.documentElement.childNodes(2).text;
+		document.getElementById("pages").innerHTML   = Document.documentElement.childNodes(3).text;
+		document.getElementById("price").innerHTML   = Document.documentElement.childNodes(4).text;
+	</script>
+</head>
+<body>
+	<xml id="dso-book" src="Book.xml"></xml>
+	<h2>Описание книги</h2>
+	<p>Заголовок: <span id="title"></span></p>
+	<p>Автор: <span id="author"></span></p>
+	<p>Обложка: <span id="binding"></span></p>
+	<p>Количество страниц: <span id="pages"></span></p>
+	<p>Цена: <span id="price"></span></p>
+</body>
+</html>

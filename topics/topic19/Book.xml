@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- Имя файла: Book.xml -->
+
+<BOOK>
+	<TITLE>Приключения Гекльбери Финна</TITLE>
+	<AUTHOR>Марк Твен</AUTHOR>
+	<BINDING>Жёсткая обложка</BINDING>
+	<PAGES>298</PAGES>
+	<PRICE>$5.49</PRICE>
+</BOOK>

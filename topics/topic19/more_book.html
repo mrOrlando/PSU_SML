@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Описание книг</title>
+	<script for="window" event="onload">
+		var HTMLCode = "";
+		var Document = document.getElementById("dso-inventory");
+		var count = Document.documentElement.childNodes.length;
+		alert(count);
+		for (i=0; i<count; i++){
+			HTMLCode +=
+			"<p>Заголовок: " + Document.documentElement.childNodes(i).childNodes(0).text + "</p>" +
+			"<p>Автор: " + Document.documentElement.childNodes(i).childNodes(1).text + "</p>" +
+			"<p>Обложка: " + Document.documentElement.childNodes(i).childNodes(2).text + "</p>" +
+			"<p>Количество страниц: " + Document.documentElement.childNodes(i).childNodes(3).text + "</p>" +
+			"<p>Цена: " + Document.documentElement.childNodes(i).childNodes(4).text + "</p><br /><br />";
+		}
+		document.getElementById("display").innerHTML = HTMLCode;
+	</script>
+</head>
+<body>
+	<xml id="dso-inventory" src="Inventory.xml"></xml>
+	<h2>Описание книг</h2>
+	<div id="display"></div>
+</body>
+</html>

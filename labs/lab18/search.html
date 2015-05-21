@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Поиск книги</title>
+</head>
+<body>
+	<xml id="dso-students" src="students.xml"></xml>
+	<h2>Поиск студента по номеру зачётки</h2>
+	<p>Выберите номер зачётки: <select id="find-number" onchange="find_student()">
+		<option value="1234">1234</option>
+		<option value="1235">1235</option>
+		<option value="1236">1236</option>
+		<option value="1237">1237</option>
+	</select></p>
+
+	<div id="result"></div>
+
+	<script>
+		function find_student(){
+			var sel = document.getElementById("find-number");
+			var number = sel.options[sel.selectedIndex].value; // параметр поиска
+			var result = document.getElementById("result");
+
+			var records = document.getElementById("dso-students"); // записи для поиска
+			var resultHTML = "<table border=\"1\"><tr><th>Номер зачётки</th><th>Фамилия</th>" +
+				"<th>Имя</th><th>Отчество</th><th>Дата рождения</th><th>Адрес</th></tr>";
+			records.recordset.moveFirst();
+			while (!records.recordset.EOF){
+				// номер зачётки текущего студента, хранящийся в атрибуте
+				var curNumber = records.recordset("NumberRecordBook").value;
+				if (curNumber == number){
+					resultHTML +=
+					"<tr><td>" + curNumber + "</td><td>" +
+					records.recordset("lastName") + "</td><td>" +
+					records.recordset("firstName") + "</td><td>" +
+					records.recordset("middleName") + "</td><td>" +
+					records.recordset("birthDate") + "</td><td>" +
+					records.recordset("adres") + "</td></tr></table>";
+
+					result.innerHTML = resultHTML;
+					return;
+				}
+				records.recordset.moveNext();
+			}
+		}
+	</script>
+</body>
+</html>

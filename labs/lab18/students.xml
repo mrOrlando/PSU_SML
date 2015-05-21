@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!-- Имя файла: students.xml -->
+
+<!DOCTYPE students[
+	<!ELEMENT students (student+)>
+	<!ELEMENT student (lastName, firstName, middleName, birthDate, adres)>
+	<!ATTLIST student NumberRecordBook NMTOKEN #REQUIRED>
+	<!ELEMENT lastName (#PCDATA)>
+	<!ELEMENT firstName (#PCDATA)>
+	<!ELEMENT middleName (#PCDATA)>
+	<!ELEMENT birthDate (#PCDATA)>
+	<!ELEMENT adres (#PCDATA)>
+	<!ELEMENT progress (#PCDATA)>
+]>
+
+<students>
+
+	<student NumberRecordBook="1234">
+		<lastName>&lt;i>Королюк&lt;/i></lastName>
+		<firstName>&lt;i>Юрий&lt;/i></firstName>
+		<middleName>&lt;i>Иванович&lt;/i></middleName>
+		<birthDate>15.05.1993</birthDate>
+		<adres>
+			<![CDATA[
+				<Республика Беларусь>
+			]]>
+		</adres>
+	</student>
+
+	<student NumberRecordBook="1235">
+		<lastName>&lt;i>Титова&lt;/i></lastName>
+		<firstName>&lt;i>Александра&lt;/i></firstName>
+		<middleName>&lt;i>Богдановна&lt;/i></middleName>
+		<birthDate>07.11.1989</birthDate>
+		<adres>
+			<![CDATA[
+				<г. Заокский, ул. Дарвина, дом 34, квартира 30>
+			]]>
+		</adres>
+	</student>
+	<!-- знак < (меньше) &lt; &#60; -->
+	<student NumberRecordBook="1236">
+		<lastName>&lt;i>Кириллов&lt;/i></lastName>
+		<firstName>&lt;i>Стоян&lt;/i></firstName>
+		<middleName>&lt;i>Романович&lt;/i></middleName>
+		<birthDate>08.05.1986</birthDate>
+		<adres>&lt;г. Усть-Абакан, ул. Сержанта Елизарова, дом 22, квартира 286></adres>
+	</student>
+
+	<student NumberRecordBook="1237">
+		<lastName>&lt;i>Чистякова&lt;/i></lastName>
+		<firstName>&lt;i>Эвелина&lt;/i></firstName>
+		<middleName>&lt;i>Даниловна&lt;/i></middleName>
+		<birthDate>03.06.1994</birthDate>
+		<adres>&#60;г. Лотошино, ул. Садовая, дом 12, квартира 222></adres>
+	</student>
+
+</students>

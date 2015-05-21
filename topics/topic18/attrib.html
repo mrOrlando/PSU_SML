@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Опись книг</title>
+</head>
+<body>
+	<xml id="dso-inventory" src="Inventory.xml"></xml>
+	<h2>Описание книг</h2>
+	<table datasrc="#dso-inventory" border="1" cellpadding="5">
+		<thead>
+			<th>Заголовок</th><th>Автор</th><th>Обложка</th><th>Страниц</th><th>Цена</th><th>Наличие</th>
+		</thead>
+		<tbody>
+			<tr align="center">
+				<td><span datafld="TITLE"></span></td>
+				<td>
+					<table datasrc="#dso-inventory" datafld="AUTHOR">
+						<tr>
+							<td><span datafld="$TEXT"></span></td>
+							<td>(<span datafld="Country"></span>)</td>
+						</tr>
+					</table>
+				</td>
+				<td><span datafld="BINDING"></span></td>
+				<td><span datafld="PAGES"></span></td>
+				<td><span datafld="PRICE"></span></td>
+				<td><span datafld="InStock"></span></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

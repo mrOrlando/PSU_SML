@@ -6,7 +6,6 @@
 		var HTMLCode = "";
 		var Document = document.getElementById("dso-inventory");
 		var count = Document.documentElement.childNodes.length;
-		alert(count);
 		for (i=0; i<count; i++){
 			HTMLCode +=
 			"<p>Заголовок: " + Document.documentElement.childNodes(i).childNodes(0).text + "</p>" +

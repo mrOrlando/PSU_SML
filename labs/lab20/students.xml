@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- Имя файла: students.xml -->
+
+<students>
+
+	<student hobby="баскетбол">
+		<lastName>&lt;i>Королюк&lt;/i></lastName>
+		<firstName>&lt;i>Юрий&lt;/i></firstName>
+		<middleName>&lt;i>Иванович&lt;/i></middleName>
+		<birthDate>15.05.1993</birthDate>
+		<adres>
+			<![CDATA[
+				<Республика Беларусь>
+			]]>
+		</adres>
+		<progress>imgs/1.jpg</progress>
+	</student>
+
+	<student hobby="танцы">
+		<lastName>&lt;i>Титова&lt;/i></lastName>
+		<firstName>&lt;i>Александра&lt;/i></firstName>
+		<middleName>&lt;i>Богдановна&lt;/i></middleName>
+		<birthDate>07.11.1989</birthDate>
+		<adres>
+			<![CDATA[
+				<г. Заокский, ул. Дарвина, дом 34, квартира 30>
+			]]>
+		</adres>
+		<progress>imgs/2.jpg</progress>
+	</student>
+
+</students>

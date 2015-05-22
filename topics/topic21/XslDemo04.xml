@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!-- Имя файла: XslDemo04.xml -->
+<?xml-stylesheet type="text/xsl" href="XslDemo04.xsl"?>
+<INVENTORY>
+	<BOOK>
+		<TITLE>Война и мир</TITLE>
+		<AUTHOR>
+			<FIRSTNAME>Лев</FIRSTNAME>
+			<LASTNAME>Толстой</LASTNAME>
+		</AUTHOR>
+		<BINDING>Жёсткая обложка</BINDING>
+		<PAGES>510</PAGES>
+		<PRICE>12 000 рублей</PRICE>
+	</BOOK>
+	<BOOK>
+		<TITLE>Преступление и наказание</TITLE>
+		<AUTHOR>
+			<FIRSTNAME>Фёдор</FIRSTNAME>
+			<LASTNAME>Достоевский</LASTNAME>
+		</AUTHOR>
+		<BINDING>Мягкая обложка</BINDING>
+		<PAGES>590</PAGES>
+		<PRICE>14 000 рублей</PRICE>
+	</BOOK>
+	<BOOK>
+		<TITLE>Королева Марго</TITLE>
+		<AUTHOR>
+			<FIRSTNAME>Александр</FIRSTNAME>
+			<LASTNAME>Дюма</LASTNAME>
+		</AUTHOR>
+		<BINDING> Мягкая обложка </BINDING>
+		<PAGES>410</PAGES>
+		<PRICE>10 000 рублей</PRICE>
+	</BOOK>
+	<BOOK>
+		<TITLE>Затерянный мир</TITLE>
+		<AUTHOR>
+			<FIRSTNAME>Артур</FIRSTNAME>
+			<LASTNAME>Конан Дойль</LASTNAME>
+		</AUTHOR>
+		<BINDING>Жёсткая обложка</BINDING>
+		<PAGES>350</PAGES>
+		<PRICE>9 000 рублей</PRICE>
+	</BOOK>
+</INVENTORY>

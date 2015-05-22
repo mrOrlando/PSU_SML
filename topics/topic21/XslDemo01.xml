@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- Имя файла: XslDemo0l.xml -->
+<?xml-stylesheet type="text/xsl" href="XslDemo01.xsl"?>
+<BOOK>
+	<TITLE>Моби-Дик</TITLE>
+		<AUTHOR>
+			<FIRSTNAME>Герман</FIRSTNAME>
+			<LASTNAME>Мэлвин</LASTNAME>
+		</AUTHOR>
+	<BINDING>Жёсткая обложка</BINDING>
+	<PAGES>724</PAGES>
+	<PRICE>$9.95</PRICE>
+</BOOK>

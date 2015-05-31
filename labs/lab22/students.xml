@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="students_template_6.xsl"?>
+<?xml-stylesheet type="text/xsl" href="students_for_6.xsl"?>
+<?xml-stylesheet type="text/xsl" href="students_template_5.xsl"?>
+<?xml-stylesheet type="text/xsl" href="students_for_5.xsl"?>
+<?xml-stylesheet type="text/xsl" href="students_template_4.xsl"?>
+<?xml-stylesheet type="text/xsl" href="students_for_4.xsl"?>
+<!-- Имя файла: students.xml -->
+
+<students>
+
+	<student Group="13ITz-3" NumberRecordBook="01" Sex="male">
+		<lastName>Королюк</lastName>
+		<firstName>Юрий</firstName>
+		<middleName>Иванович</middleName>
+		<birthDate>1993</birthDate>
+		<adres>Республика Беларусь</adres>
+	</student>
+	<!-- Данные сформированы генератором личностей www.randus.ru -->
+	<student Group="13ITz-3" NumberRecordBook="02" Sex="female">
+		<lastName>Титова</lastName>
+		<firstName>Александра</firstName>
+		<middleName>Богдановна</middleName>
+		<birthDate>1989</birthDate>
+		<adres>г. Заокский, ул. Дарвина, дом 34, квартира 30</adres>
+	</student>
+
+	<student Group="13ITz-2" NumberRecordBook="03" Sex="male">
+		<lastName>Кириллов</lastName>
+		<firstName>Стоян</firstName>
+		<middleName>Романович</middleName>
+		<birthDate>1986</birthDate>
+		<adres>г. Усть-Абакан, ул. Сержанта Елизарова, дом 22, квартира 286</adres>
+	</student>
+
+	<student Group="13ITz-3" NumberRecordBook="04" Sex="female">
+		<lastName>Чистякова</lastName>
+		<firstName>Эвелина</firstName>
+		<middleName>Даниловна</middleName>
+		<birthDate>1994</birthDate>
+		<adres>г. Лотошино, ул. Садовая, дом 12, квартира 222</adres>
+	</student>
+
+	<student Group="13ITz-3" NumberRecordBook="03" Sex="male">
+		<lastName>Андрейченко</lastName>
+		<firstName>Михаил</firstName>
+		<middleName>Николаевич</middleName>
+		<birthDate>1990</birthDate>
+		<adres>г. Смоленск, ул. Елизарова, дом 100, квартира 4</adres>
+	</student>
+
+</students>

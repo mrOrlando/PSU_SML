@@ -1,0 +1,10 @@
+<xsd:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
+	elementFormDefault="qualified"
+	xmlns="http://tempuri.org/XMLSchema.xsd"
+	xmlns:mstns="http://tempuri.org/XMLSchema.xsd">
+	<element name="lastName"></element>
+	<element name="firstName"></element>
+	<element name="middleName"></element>
+	<element name="birthDate"></element>
+	<element name="adres"></element>
+</xsd:schema>

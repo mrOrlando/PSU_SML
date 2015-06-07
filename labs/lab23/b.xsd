@@ -1,0 +1,9 @@
+
+<xsd:attribute name="Days" type="normalizedstring" use="required" />
+
+<xsd:attribute name="Time" type="normalizedstring" use="required" />
+
+<!-- Необязательный атрибут use принимает три значения:
+ - optional — описываемый атрибут необязателен (это значение по умолчанию);
+ - required — описываемый атрибут обязателен;
+ - prohibited — описываемый атрибут неприменим. Это значение полезнопри определении подтипа, чтобы отменить некоторые атрибуты базовоготипа. -->
